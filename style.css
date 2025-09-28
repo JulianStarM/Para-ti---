@@ -1,46 +1,79 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+
+    body {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffe5e5;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 20px;
+        max-width: 500px;
+        margin: 20px;
+    }
+
+    .container .tenor-gif-embed {
+        display: flex;
+        max-width: 200px;
+    }
+
+    .container .btn {
+        display: flex;
+        gap: 25px;
+    }
+
+
+
+/*----------------------------------------------------------------------*/
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url("IMAGENES/1.2.jpg") no-repeat center center fixed;
+        background-size: cover;
+    }
+h1, p {
+    color: white; /* cambia 'white' por el color que quieras */
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7); /* opcional, para que resalte */
 }
 
-body {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffe5e5;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    gap: 20px;
-    max-width: 500px;
-    margin: 20px;
-}
-
-.container .tenor-gif-embed {
-    display: flex;
-    max-width: 200px;
-}
-
-.container .btn {
-    display: flex;
-    gap: 25px;
-}
-
+/* Estilo normal de los botones */
 .btn a {
     text-decoration: none;
-    color: #111;
+    color: #111111;
     background: #fff;
     padding: 10px 25px;
     border-radius: 8px;
-    box-shadow: 0.5rem 1rem 3rem hsl(0, 0, 0,0.3);
+    box-shadow: 0.5rem 1rem 3rem rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease; /* suave animación */
+}
 
+/* Cuando pasas el mouse */
+.btn a:hover {
+    background: #0099ff;   /* color rosado */
+    color: white;          /* cambia el texto a blanco */
+    transform: scale(1.1); /* efecto crecer */
+}
+
+/* Cuando haces clic */
+.btn a:active {
+    background: #e60073;  /* un rosa más fuerte al presionar */
+    transform: scale(0.95); /* efecto presionar */
 }
